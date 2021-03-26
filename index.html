@@ -632,6 +632,7 @@
     <script type="text/javascript">
       $("#contact__form").on("submit", function (event) {
         event.preventDefault();
+        let myForm = document.getElementById("contact__form");
         let formData = new FormData(myForm);
 
         $.ajax({
