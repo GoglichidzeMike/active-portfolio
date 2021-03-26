@@ -630,29 +630,20 @@
     </main>
     <script src="./main.js"></script>
     <script type="text/javascript">
-      $("#contact__form").on("submit", function (event) {
-        event.preventDefault();
+      document.querySelector("form").addEventListener("submit", handleSubmit);
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
         let myForm = document.getElementById("contact__form");
         let formData = new FormData(myForm);
-
-        $.ajax({
-          url: "/",
+        fetch("/", {
+          method: "POST",
           headers: { "Content-Type": "multipart/form-data" },
           body: new URLSearchParams(formData).toString(),
-          method: "POST",
         })
-          .then(function (response) {
-            $("#firstName").val("");
-            $("#lastName").val("");
-            $("#email").val("");
-            $("#phone").val("");
-            $("#message").val("");
-            $("#postSubmit").text(response);
-          })
-          .catch(function (err) {
-            console.error(err);
-          });
-      });
+          .then(() => console.log("Form successfully submitted"))
+          .catch((error) => alert(error));
+      };
     </script>
   </body>
 </html>
