@@ -610,6 +610,7 @@
                   <span class="current-state-msg hide">Sending...</span>
                   <span class="done-state-msg hide">Done!</span>
                 </button>
+                <p id="postSubmit">&nbsp</p>
               </form>
             </div>
           </div>
@@ -639,7 +640,14 @@
           headers: { "Content-Type": "multipart/form-data" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => console.log("Form successfully submitted"))
+          .then(() => {
+            $("#firstName").val("");
+            $("#lastName").val("");
+            $("#email").val("");
+            $("#number").val("");
+            $("#message").val("");
+            $("#postSubmit").text("Form Submitted Successfully");
+          })
           .catch((error) => alert(error));
       };
       document
