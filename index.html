@@ -629,5 +629,35 @@
       </div>
     </main>
     <script src="./main.js"></script>
+    <script type="text/javascript">
+      $("#contact__form").on("submit", function (event) {
+        event.preventDefault();
+        var data = {
+          firstName: $("#firstName").val(),
+          lastName: $("#lastName").val(),
+          email: $("#email").val(),
+          number: $("#phone").val(),
+          message: $("#message").val(),
+        };
+        $.ajax({
+          url: "/",
+          data: data,
+          headers: { "Content-Type": "multipart/form-data" },
+          body: new URLSearchParams(formData).toString(),
+          method: "POST",
+        })
+          .then(function (response) {
+            $("#firstName").val("");
+            $("#lastName").val("");
+            $("#email").val("");
+            $("#number").val("");
+            $("#message").val("");
+            $("#postSubmit").text(response);
+          })
+          .catch(function (err) {
+            console.error(err);
+          });
+      });
+    </script>
   </body>
 </html>
