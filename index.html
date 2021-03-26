@@ -630,7 +630,9 @@
     </main>
     <script src="./main.js"></script>
     <script type="text/javascript">
-      document.querySelector("form").addEventListener("submit", handleSubmit);
+      document
+        .getElementById("contact__form")
+        .addEventListener("submit", handleSubmit);
 
       const handleSubmit = (e) => {
         e.preventDefault();
