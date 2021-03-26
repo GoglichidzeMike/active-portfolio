@@ -632,16 +632,10 @@
     <script type="text/javascript">
       $("#contact__form").on("submit", function (event) {
         event.preventDefault();
-        var data = {
-          firstName: $("#firstName").val(),
-          lastName: $("#lastName").val(),
-          email: $("#email").val(),
-          number: $("#phone").val(),
-          message: $("#message").val(),
-        };
+        let formData = new FormData(myForm);
+
         $.ajax({
           url: "/",
-          data: data,
           headers: { "Content-Type": "multipart/form-data" },
           body: new URLSearchParams(formData).toString(),
           method: "POST",
