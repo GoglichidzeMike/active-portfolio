@@ -1086,6 +1086,12 @@ nav .nav__button {
         -ms-flex-align: center;
             align-items: center;
   }
+  .about .about__how-section .desktop {
+    display: inline-block;
+  }
+  .about .about__how-section .mobile {
+    display: none;
+  }
   .about .about__how-section .circle__container {
     width: 40%;
   }
@@ -1146,6 +1152,8 @@ nav .nav__button {
 }
 
 .work {
+  margin-top: -60px;
+  padding-top: 60px;
   position: relative;
 }
 
