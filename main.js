@@ -73,3 +73,8 @@ $(".individual").bind(
 $(".individual").hover(function () {
   $(this).addClass("animated");
 });
+
+console.log("If you are here");
+console.log("Might as well hire me?");
+console.log("+995 579 900 900");
+console.log("mike@goglichidze.me");
