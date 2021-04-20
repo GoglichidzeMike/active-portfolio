@@ -17,6 +17,9 @@
   --secondary-color: #174aff;
   --third-color: #202020;
   --gray-color: #3d3d3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
@@ -24,7 +27,6 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -1117,8 +1119,10 @@ nav .nav__button {
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   .about .about__how-section .circle__container .circle:hover {
-    -webkit-transform: scale(1.1, 1.1) rotate(-15deg);
-            transform: scale(1.1, 1.1) rotate(-15deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: scale(1.1, 1.1) rotate(-15deg) translateZ(0);
+            transform: scale(1.1, 1.1) rotate(-15deg) translateZ(0);
   }
   .about .about__how-section .circle__container .circle:hover::after {
     opacity: 1;
