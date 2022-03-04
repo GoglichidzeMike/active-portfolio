@@ -997,7 +997,7 @@ nav {
 
 					&:hover {
 						backface-visibility: hidden;
-						transform: scale(1.1, 1.1) rotate(-15deg) translateZ(0);
+						transform: scale(1.05, 1.05) rotate(-3deg) translateZ(0);
 					}
 
 					&:hover::after {
