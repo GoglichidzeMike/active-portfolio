@@ -663,7 +663,7 @@ nav {
 		background: white;
 		margin: 1rem auto 2rem auto;
 		padding: 0 0.75rem;
-		max-width: 337px;
+		max-width: 330px;
 		height: 80px;
 		display: flex;
 		justify-content: space-between;
@@ -1174,7 +1174,7 @@ nav {
 				font-family: var(--font-family);
 				text-transform: lowercase;
 				text-shadow: var(--shadow) 2px 2px;
-				transition: flex-grow var(--duration) var(--ease);
+				transition: all var(--duration) var(--ease);
 			}
 
 			.portfolio__item__multi-button button + button {

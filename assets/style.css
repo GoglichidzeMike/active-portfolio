@@ -778,7 +778,7 @@ nav .nav__button {
   background: white;
   margin: 1rem auto 2rem auto;
   padding: 0 0.75rem;
-  max-width: 337px;
+  max-width: 330px;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1303,10 +1303,8 @@ nav .nav__button {
   font-family: var(--font-family);
   text-transform: lowercase;
   text-shadow: var(--shadow) 2px 2px;
-  -webkit-transition: flex-grow var(--duration) var(--ease), -webkit-box-flex var(--duration) var(--ease);
-  transition: flex-grow var(--duration) var(--ease), -webkit-box-flex var(--duration) var(--ease);
-  transition: flex-grow var(--duration) var(--ease);
-  transition: flex-grow var(--duration) var(--ease), -webkit-box-flex var(--duration) var(--ease), -ms-flex-positive var(--duration) var(--ease);
+  -webkit-transition: all var(--duration) var(--ease);
+  transition: all var(--duration) var(--ease);
 }
 
 .work .work__portfolio .work__portfolio__item .portfolio__item__multi-button button + button {
